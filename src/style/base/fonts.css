@@ -1,0 +1,188 @@
+@font-face {
+	font-family: 'Inter';
+	src:
+		local('Inter Bold'),
+		local('Inter-Bold'),
+		url('../../assets../../assets/fonts/inter/Inter-Bold.woff2') format('woff2'),
+		url('../../assets../../assets/fonts/inter/Inter-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		local('Inter Black'),
+		local('Inter-Black'),
+		url('../../assets../../assets/fonts/inter/Inter-Black.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/inter/Inter-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		local('Inter ExtraBold'),
+		local('Inter-ExtraBold'),
+		url('../../assets../../assets/fonts/inter/Inter-ExtraBold.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/inter/Inter-ExtraBold.woff')
+			format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		local('Inter Light'),
+		local('Inter-Light'),
+		url('../../assets../../assets/fonts/inter/Inter-Light.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/inter/Inter-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		local('Inter ExtraLight'),
+		local('Inter-ExtraLight'),
+		url('../../assets../../assets/fonts/inter/Inter-ExtraLight.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/inter/Inter-ExtraLight.woff')
+			format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		local('Inter Regular'),
+		local('Inter-Regular'),
+		url('../../assets../../assets/fonts/inter/Inter-Regular.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/inter/Inter-Regular.woff')
+			format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		local('Inter Medium'),
+		local('Inter-Medium'),
+		url('../../assets../../assets/fonts/inter/Inter-Medium.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/inter/Inter-Medium.woff') format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		local('Inter SemiBold'),
+		local('Inter-SemiBold'),
+		url('../../assets../../assets/fonts/inter/Inter-SemiBold.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/inter/Inter-SemiBold.woff')
+			format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		local('Inter Thin'),
+		local('Inter-Thin'),
+		url('../../assets../../assets/fonts/inter/Inter-Thin.woff2') format('woff2'),
+		url('../../assets../../assets/fonts/inter/Inter-Thin.woff') format('woff');
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src:
+		local('Quicksand Medium'),
+		local('Quicksand-Medium'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-Medium.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-Medium.woff')
+			format('woff');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src:
+		local('Quicksand Light'),
+		local('Quicksand-Light'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-Light.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-Light.woff')
+			format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src:
+		local('Quicksand Bold'),
+		local('Quicksand-Bold'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-Bold.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-Bold.woff')
+			format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src:
+		local('Quicksand SemiBold'),
+		local('Quicksand-SemiBold'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-SemiBold.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-SemiBold.woff')
+			format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Quicksand';
+	src:
+		local('Quicksand Regular'),
+		local('Quicksand-Regular'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-Regular.woff2')
+			format('woff2'),
+		url('../../assets../../assets/fonts/quicksand/Quicksand-Regular.woff')
+			format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
