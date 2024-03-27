@@ -1,14 +1,14 @@
 'use strict'
 
 import { JSDOM } from 'jsdom'
-import { setElementAttributes } from '../set-element-attributes.js'
+import { setAttributes } from '../set-element-attributes.js'
 
 const dom = new JSDOM('<!DOCTYPE html>')
 global.window = dom.window
 global.document = window.document
 global.HTMLElement = window.HTMLElement
 
-describe('setElementAttributes', () => {
+describe('setAttributes', () => {
 	it('should set valid attributes on a valid HTML element', () => {
 		const element = document.createElement('div')
 		const attributes = {
@@ -17,7 +17,7 @@ describe('setElementAttributes', () => {
 			style: 'color: blue;'
 		}
 
-		const result = setElementAttributes(element, attributes)
+		const result = setAttributes(element, attributes)
 
 		expect(result).toEqual(true)
 		expect(element.getAttribute('id')).toBe('sample-div')
@@ -35,7 +35,7 @@ describe('setElementAttributes', () => {
 			style: 'color: red;'
 		}
 
-		const result = setElementAttributes(null, attributes)
+		const result = setAttributes(null, attributes)
 		expect(spyConsoleError).toHaveBeenCalledWith(
 			'The element must be provided.'
 		)
@@ -51,7 +51,7 @@ describe('setElementAttributes', () => {
 		const element = document.createElement('div')
 		const attributes = {}
 
-		const result = setElementAttributes(element, attributes)
+		const result = setAttributes(element, attributes)
 
 		expect(result).toEqual(false)
 		expect(spyConsoleError).toHaveBeenCalledWith(
@@ -64,7 +64,7 @@ describe('setElementAttributes', () => {
 		const attributes = null
 		const consoleErrorSpy = jest.spyOn(console, 'error')
 
-		const result = setElementAttributes(element, attributes)
+		const result = setAttributes(element, attributes)
 
 		expect(result).toBe(false)
 		expect(consoleErrorSpy).toHaveBeenCalledWith(
@@ -81,7 +81,7 @@ describe('setElementAttributes', () => {
 			style: 'color: red;'
 		}
 
-		const result = setElementAttributes(element, attributes)
+		const result = setAttributes(element, attributes)
 
 		expect(result).toBe(false)
 	})
@@ -94,7 +94,7 @@ describe('setElementAttributes', () => {
 			'data-123': '123'
 		}
 
-		const result = setElementAttributes(element, attributes)
+		const result = setAttributes(element, attributes)
 
 		expect(result).toBe(true)
 		expect(element.getAttribute('data-special')).toBe('special')

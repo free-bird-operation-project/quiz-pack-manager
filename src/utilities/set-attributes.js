@@ -30,4 +30,4 @@ function setAttributes(element, attributes) {
 	return true
 }
 
-export { setElementAttributes }
+export { setAttributes }
