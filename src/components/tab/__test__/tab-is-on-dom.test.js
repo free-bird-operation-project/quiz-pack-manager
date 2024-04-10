@@ -30,18 +30,4 @@ describe('isTabOnDOM', () => {
 
 		expect(result).toBe(false)
 	})
-
-	it('should log a message if tab element exists in the DOM', () => {
-		const tabElement = document.createElement('div')
-		tabElement.id = 'tab'
-		document.body.appendChild(tabElement)
-
-		const consoleSpy = jest.spyOn(console, 'log').mockImplementation()
-
-		isTabOnDOM()
-
-		expect(consoleSpy).toHaveBeenCalledWith('Tab is already in the DOM.')
-
-		consoleSpy.mockRestore()
-	})
 })

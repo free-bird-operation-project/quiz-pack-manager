@@ -1,15 +1,16 @@
 'use strict'
 
+import { isTabOnDOM } from './tab-is-on-dom'
+
 function tabRemove() {
 	const tab = document.getElementById('tab')
 
-	if (!tab) {
-		console.log('Tab is no longer in the DOM.')
-		return false
+	if (isTabOnDOM()) {
+		tab.remove()
+		return true
 	}
 
-	tab.remove()
-	return true
+	return false
 }
 
 export { tabRemove }

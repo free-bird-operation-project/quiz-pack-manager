@@ -15,15 +15,10 @@ describe('tabRemove', () => {
 		document.body.innerHTML = ''
 	})
 
-	it('should return false and log a message if tab element does not exist in the DOM', () => {
-		const consoleSpy = jest.spyOn(console, 'log').mockImplementation()
-
+	it('should return false if tab element does not exist in the DOM', () => {
 		const result = tabRemove()
 
 		expect(result).toBe(false)
-		expect(consoleSpy).toHaveBeenCalledWith('Tab is no longer in the DOM.')
-
-		consoleSpy.mockRestore()
 	})
 
 	it('should return true and remove tab element from the DOM if it exists', () => {
