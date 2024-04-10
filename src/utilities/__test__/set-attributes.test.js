@@ -86,6 +86,24 @@ describe('setAttributes', () => {
 		expect(result).toBe(false)
 	})
 
+	it('should return false if attributes is not an object', () => {
+		const element = document.createElement('div')
+		const attributes = 'not an object'
+		expect(setAttributes(element, attributes)).toBe(false)
+	})
+
+	it('should return false if attributes is an empty object', () => {
+		const element = document.createElement('div')
+		const attributes = {}
+		expect(setAttributes(element, attributes)).toBe(false)
+	})
+
+	it('should return true if attributes is a valid object', () => {
+		const element = document.createElement('div')
+		const attributes = { class: 'test-class', id: 'test-id' }
+		expect(setAttributes(element, attributes)).toBe(true)
+	})
+
 	it('should set attributes with special characters correctly when provided with a valid HTML element and a non-empty object', () => {
 		const element = document.createElement('div')
 		const attributes = {
