@@ -6,7 +6,7 @@ import { tabRemove } from './tab-remove.js'
 
 class Tab {
 	render() {
-		if (isTabOnDOM()) {
+		if (!isTabOnDOM()) {
 			tabRender()
 		}
 	}

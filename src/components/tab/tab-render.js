@@ -16,11 +16,13 @@ function tabRender() {
 	})
 
 	setAttributes(iconMakerContainer, {
-		class: 'icon-container'
+		class: 'icon-container',
+		id: 'icon-maker-container'
 	})
 
 	setAttributes(iconManagerContainer, {
-		class: 'icon-container'
+		class: 'icon-container active',
+		id: 'icon-manager-container'
 	})
 
 	setAttributes(makerIcon, {

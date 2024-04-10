@@ -48,10 +48,16 @@ describe('tabRender', () => {
 
 		const iconMakerContainer = container.querySelector('.icon-container')
 		expect(iconMakerContainer.getAttribute('class')).toBe('icon-container')
+		expect(iconMakerContainer.getAttribute('id')).toBe('icon-maker-container')
 
 		const iconManagerContainer =
 			container.querySelectorAll('.icon-container')[1]
-		expect(iconManagerContainer.getAttribute('class')).toBe('icon-container')
+		expect(iconManagerContainer.getAttribute('class')).toBe(
+			'icon-container active'
+		)
+		expect(iconManagerContainer.getAttribute('id')).toBe(
+			'icon-manager-container'
+		)
 
 		const makerIcon = iconMakerContainer.querySelector('.icon')
 		expect(makerIcon.getAttribute('class')).toBe(

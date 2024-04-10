@@ -2,13 +2,6 @@
 
 import { JSDOM } from 'jsdom'
 import { Tab } from '../tab.js'
-import { isTabOnDOM } from '../tab-is-on-dom.js'
-import { tabRender } from '../tab-render.js'
-import { tabRemove } from '../tab-remove.js'
-
-jest.mock('../tab-is-on-dom.js')
-jest.mock('../tab-render.js')
-jest.mock('../tab-remove.js')
 
 describe('Tab', () => {
 	beforeEach(() => {
@@ -23,31 +16,31 @@ describe('Tab', () => {
 	})
 
 	describe('render()', () => {
-		it('should render tab if not available', () => {
-			isTabOnDOM.mockReturnValueOnce(true)
+		it('should render tab if it is not on DOM', () => {
 			const tab = new Tab()
+
 			tab.render()
 
-			expect(isTabOnDOM).toHaveBeenCalled()
-			expect(tabRender).toHaveBeenCalled()
+			expect(document.body.childElementCount).toBe(1)
 		})
 
-		it('should not render tab if not available', () => {
-			isTabOnDOM.mockReturnValueOnce(false)
-			const tab = new Tab()
-			tab.render()
+		it('should not render if tab is already on DOM', () => {
+			const existingTab = new Tab()
+			existingTab.render()
 
-			expect(isTabOnDOM).toHaveBeenCalled()
-			expect(tabRender).toHaveBeenCalled()
+			const newTab = new Tab()
+			newTab.render()
+
+			expect(document.body.childElementCount).toBe(1)
 		})
 	})
 
 	describe('remove()', () => {
-		it('should remove tab', () => {
+		it('should remove tab on DOM', () => {
 			const tab = new Tab()
 			tab.remove()
 
-			expect(tabRemove).toHaveBeenCalled()
+			expect(document.body.childElementCount).toBe(0)
 		})
 	})
 })
