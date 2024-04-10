@@ -2,6 +2,7 @@
 
 import { createIcons, Folder, PencilRuler } from 'lucide'
 import { setAttributes } from '../../utilities/set-attributes.js'
+import { activateTabEventListener } from './tab-active.js'
 
 function renderTab() {
 	const container = document.createElement('div')
@@ -47,6 +48,8 @@ function renderTab() {
 			Folder
 		}
 	})
+
+	activateTabEventListener()
 
 	return true
 }
