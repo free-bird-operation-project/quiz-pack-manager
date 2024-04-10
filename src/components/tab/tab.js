@@ -3,18 +3,18 @@
 import './tab.css'
 
 import { isTabOnDOM } from './tab-is-on-dom.js'
-import { tabRender } from './tab-render.js'
-import { tabRemove } from './tab-remove.js'
+import { renderTab } from './tab-render.js'
+import { removeTab } from './tab-remove.js'
 
 class Tab {
 	render() {
 		if (!isTabOnDOM()) {
-			tabRender()
+			renderTab()
 		}
 	}
 
 	remove() {
-		tabRemove()
+		removeTab()
 	}
 }
 

@@ -2,7 +2,7 @@
 
 import { isTabOnDOM } from './tab-is-on-dom'
 
-function tabRemove() {
+function removeTab() {
 	const tab = document.getElementById('tab')
 
 	if (isTabOnDOM()) {
@@ -13,4 +13,4 @@ function tabRemove() {
 	return false
 }
 
-export { tabRemove }
+export { removeTab }

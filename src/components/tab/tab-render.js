@@ -3,7 +3,7 @@
 import { createIcons, Folder, PencilRuler } from 'lucide'
 import { setAttributes } from '../../utilities/set-attributes.js'
 
-function tabRender() {
+function renderTab() {
 	const container = document.createElement('div')
 	const iconMakerContainer = document.createElement('div')
 	const iconManagerContainer = document.createElement('div')
@@ -51,4 +51,4 @@ function tabRender() {
 	return true
 }
 
-export { tabRender }
+export { renderTab }

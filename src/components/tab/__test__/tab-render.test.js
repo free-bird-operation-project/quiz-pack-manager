@@ -1,9 +1,9 @@
 'use strict'
 
 import { JSDOM } from 'jsdom'
-import { tabRender } from '../tab-render.js'
+import { renderTab } from '../tab-render.js'
 
-describe('tabRender', () => {
+describe('renderTab', () => {
 	beforeEach(() => {
 		const dom = new JSDOM('<!DOCTYPE html>')
 		global.window = dom.window
@@ -16,7 +16,7 @@ describe('tabRender', () => {
 	})
 
 	it('should render the tab elements in the DOM', () => {
-		tabRender()
+		renderTab()
 
 		const container = document.getElementById('tab')
 		expect(container).not.toBeNull()
@@ -41,7 +41,7 @@ describe('tabRender', () => {
 	})
 
 	it('should set correct attributes for each element', () => {
-		tabRender()
+		renderTab()
 
 		const container = document.getElementById('tab')
 		expect(container.getAttribute('class')).toBe('tab')
@@ -71,7 +71,7 @@ describe('tabRender', () => {
 	})
 
 	it('should return true after rendering', () => {
-		const result = tabRender()
+		const result = renderTab()
 		expect(result).toBe(true)
 	})
 })

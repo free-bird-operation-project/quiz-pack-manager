@@ -1,9 +1,9 @@
 'use strict'
 
 import { JSDOM } from 'jsdom'
-import { tabRemove } from '../tab-remove.js'
+import { removeTab } from '../tab-remove.js'
 
-describe('tabRemove', () => {
+describe('removeTab', () => {
 	beforeEach(() => {
 		const dom = new JSDOM('<!DOCTYPE html>')
 		global.window = dom.window
@@ -16,7 +16,7 @@ describe('tabRemove', () => {
 	})
 
 	it('should return false if tab element does not exist in the DOM', () => {
-		const result = tabRemove()
+		const result = removeTab()
 
 		expect(result).toBe(false)
 	})
@@ -26,7 +26,7 @@ describe('tabRemove', () => {
 		tabElement.id = 'tab'
 		document.body.appendChild(tabElement)
 
-		const result = tabRemove()
+		const result = removeTab()
 
 		expect(result).toBe(true)
 		expect(document.getElementById('tab')).toBeNull()
