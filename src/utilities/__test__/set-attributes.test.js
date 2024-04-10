@@ -1,7 +1,7 @@
 'use strict'
 
 import { JSDOM } from 'jsdom'
-import { setAttributes } from '../set-element-attributes.js'
+import { setAttributes } from '../set-attributes.js'
 
 const dom = new JSDOM('<!DOCTYPE html>')
 global.window = dom.window
